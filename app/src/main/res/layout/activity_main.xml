@@ -1,4 +1,3 @@
-
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -29,7 +28,7 @@
                 android:textColor="@android:color/white"/>
 
             <Button
-                android:onClick="updateScoreRed"
+                android:onClick="updateRedScore"
                 android:id="@+id/red_team_plus_2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -41,7 +40,7 @@
                 android:layout_margin="8dp"/>
 
             <Button
-                android:onClick="updateScoreBlue"
+                android:onClick="updateRedScore"
                 android:id="@+id/red_team_plus_3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -72,7 +71,7 @@
                 android:textSize="250sp" />
 
             <Button
-                android:onClick="update"
+                android:onClick="updateBlueScore"
                 android:id="@+id/blue_team_plus_2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -84,6 +83,7 @@
                 android:layout_margin="8dp"/>
 
             <Button
+                android:onClick="updateBlueScore"
                 android:id="@+id/blue_team_plus_3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

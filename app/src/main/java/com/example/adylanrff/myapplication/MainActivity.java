@@ -31,31 +31,54 @@ public class MainActivity extends AppCompatActivity {
         blueTeamScore = (TextView) findViewById(R.id.blue_team_score);
         resetButton = (Button) findViewById(R.id.reset_button);
 
-
-
         resetButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(MainActivity.this, "Pencet", Toast.LENGTH_SHORT).show();
+                redTeam = 0;
+                blueTeam = 0;
+                changeRedScore(redTeam);
+                changeRedScore(blueTeam);
             }
         });
 
-
-
-        changeRedScore(2);
-        changeBlueScore(3);
+        changeRedScore(0);
+        changeBlueScore(0);
     }
 
 
+    public void updateRedScore(View v){
+        if(v.getId()==R.id.red_team_plus_2){
+            redTeam+=2;
+        }
+        else {
+            redTeam+=3;
+        }
 
+        changeRedScore(redTeam);
+    }
+
+    public void updateBlueScore(View v){
+        if(v.getId()==R.id.blue_team_plus_2){
+            blueTeam+=2;
+        }
+        else {
+            blueTeam+=3;
+        }
+        changeBlueScore(blueTeam);
+    }
 
     void changeRedScore(Integer quantity){
+        if(redTeam>=10){
+            redTeamScore.setTextSize(30);
+        }
         redTeamScore.setText(""+quantity);
     }
 
     void changeBlueScore(Integer quantity){
+        if (blueTeam>=10){
+            blueTeamScore.setTextSize(30);
+        }
         blueTeamScore.setText(""+quantity);
     }
-
 
 }
